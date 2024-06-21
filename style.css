@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+body {
+    background-color: #ffdcdc; /* Light pink background */
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(to bottom right, #ffa3a3, #ffe3e3); /* Gradient background in rose gold */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0.1, 0, 0.1, 0.1); /* Shadow effect */
+    padding: 20px;
+    width: 400px;
+    
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+    color: #fff; /* White text color */
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: #333; /* Dark gray label color */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #555; /* Darken border on focus */
+}
+
+.form-control.success input {
+    border-color: var(--success-color); /* Green border for success */
+}
+
+.form-control.error input {
+    border-color: var(--error-color); /* Red border for error */
+}
+
+.form-control small {
+    color: var(--error-color); /* Red error message color */
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    visibility: hidden;
+    font-size: 12px;
+    transition: visibility 0.3s ease;
+}
+
+.form-control.error small {
+    visibility: visible; /* Show error message on error */
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #ffadad; /* Light rose gold button background */
+    border: 2px solid #333; /* Dark border */
+    border-radius: 4px;
+    color: #333; /* Dark button text color */
+   
+    font-size: 16px;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100px;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+    background-color: #ff8a8a; /* Darker rose gold on hover */
+    color: #fff; /* White text on hover */
+    transform: scale(1.10); /* Scale up on hover */
+}
